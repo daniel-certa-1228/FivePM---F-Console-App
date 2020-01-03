@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="web.config" />
     <Compile Include="Program.fs" />
   </ItemGroup>
+
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
