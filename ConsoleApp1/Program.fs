@@ -43,9 +43,9 @@ let getClosest() =
       // Get the first item
       |> List.head
 
-let runWebServer argv = 
+let runWebServer (argv:string[]) = 
     // Define the port where you want to serve. We'll hardcode this for now.
-    let port = 8080
+    let port = if argv.Length = 0 then 8080 else (int argv.[0])
     // create an app config with the port
     let cfg = {defaultConfig with bindings = [ HttpBinding.createSimple HTTP "0.0.0.0" port]}
     // We'll define a single GET route at the / endpoint that returns "Hello World"
